@@ -34,7 +34,7 @@ class Deployer(object):
 
         # DebugSetting("requestContent, responseContent")
 
-    def deploy(self, template_path, name, parameters = {}):
+    def deploy(self, template_path, name, publicIp = False):
         """Deploy the template to a resource group."""
         self.dns_label_prefix = self.name_generator.haikunate()
         self.client.resource_groups.create_or_update(
@@ -46,6 +46,14 @@ class Deployer(object):
 
         with open(template_path, 'r') as template_file_fd:
             template = json.load(template_file_fd)
+
+        if publicIp :
+            parameters = {
+                'sshKeyData': self.pub_ssh_key,
+                'dnsLabelPrefix': self.dns_label_prefix
+            }
+        else :
+            parameters = {}
 
         parameters = {k: {'value': v} for k, v in parameters.items()}
 

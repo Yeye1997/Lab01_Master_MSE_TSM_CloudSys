@@ -40,10 +40,7 @@ try:
     # Deploy Guacamole Desktop
     print(" - Deploying Guacamole Desktop...")
     guacamole_template_path = os.path.join(os.path.dirname(__file__), 'templates', 'desktop.json')
-    guacamole_deployment = deployer.deploy(guacamole_template_path, 'guacamole', parameters = {
-        'sshKeyData': self.pub_ssh_key,
-        'dnsLabelPrefix': self.dns_label_prefix
-    })
+    guacamole_deployment = deployer.deploy(guacamole_template_path, 'guacamole', True)
     print("   => Done deploying Guacamole! You can connect via: `ssh guacamole@{}.switzerlandnorth.cloudapp.azure.com`\n".format(deployer.dns_label_prefix))
 
     print("All deployements finished. \n\n")
