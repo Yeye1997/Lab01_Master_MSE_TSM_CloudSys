@@ -1,0 +1,1 @@
+sudo mysql guacamole_db -e "UPDATE guacamole_connection_parameter SET parameter_value ='10.1.1.29' WHERE connection_id = 1 AND parameter_name = 'hostname';"
