@@ -10,8 +10,8 @@ clouds:
   openstack:
     auth:
       auth_url: https://keystone.cloud.switch.ch:5000/v3
-      username: "anthonyclaudeflorent.alonsolopez@edu.hefr.ch"
-      password: 8bb046dcdffb7dfc3140acfb8b30ee7f
+      username: "YOUR USERNAME HERE"
+      password: YOUR PASSWORD HERE
       project_id: 7d78b0cd7e68421c87101cf6f8c2b5a4
       project_name: "Lopez_Anthony_Alt_Lamine_Bueche_Nicolas,"
       user_domain_name: "Default"

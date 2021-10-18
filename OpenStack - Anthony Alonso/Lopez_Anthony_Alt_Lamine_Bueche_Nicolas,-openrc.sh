@@ -25,14 +25,14 @@ unset OS_TENANT_ID
 unset OS_TENANT_NAME
 # In addition to the owning entity (tenant), OpenStack stores the entity
 # performing the action as the **user**.
-export OS_USERNAME="anthonyclaudeflorent.alonsolopez@edu.hefr.ch"
+export OS_USERNAME="YOUR USERNAME HERE"
 #
 # SWITCHengines API Credentials:
 # https://help.switch.ch/engines/faq/how-to-create-api-credentials/
 #
 echo "Enter your SWITCHengines API credentials for project $OS_PROJECT_NAME as user $OS_USERNAME: "
 read -sr API_KEY_INPUT
-export OS_PASSWORD="8bb046dcdffb7dfc3140acfb8b30ee7f"
+export OS_PASSWORD="YOUR PASSWORD HERE"
 # If your configuration has multiple regions, we set that information here.
 export OS_REGION_NAME="LS"
 # Don't leave a blank variable, unset it if it was empty
