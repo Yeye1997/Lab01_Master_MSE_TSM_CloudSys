@@ -6,5 +6,5 @@ Manual deployment : by using the GUI of the related IaaS
 
 Automatic deployment: by using the proprietary API of the IaaS.
 
-##GitHub
+## GitHub
 This repository contains all the lab01 files of group B (Anthony Alonso, Alt Thibaud, Bueche Lucas, Ba Mouhamadou Lamine and Chris Nicolas)
