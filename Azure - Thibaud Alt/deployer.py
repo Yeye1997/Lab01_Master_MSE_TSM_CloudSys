@@ -1,4 +1,6 @@
 """A deployer class to deploy a template on Azure"""
+
+import base64
 import os.path
 import json
 from haikunator import Haikunator
@@ -62,6 +64,10 @@ class Deployer(object):
             'template': template,
             'parameters': parameters
         }
+
+        if name == "guacapache" :
+            with open("config/guac-init.txt", "rb") as cloud_init:
+                deployment_properties["customData"] = base64.b64encode(cloud_init.read())
 
         deployment_async_operation = self.client.deployments.create_or_update(
             self.resource_group,

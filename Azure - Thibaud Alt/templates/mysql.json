@@ -60,7 +60,7 @@
         "addressPrefixes": {
             "type": "array",
             "defaultValue": [
-                "10.1.0.0/16"
+                "10.0.0.0/16"
             ]
         },
         "subnets": {
@@ -69,7 +69,7 @@
                 {
                     "name": "default",
                     "properties": {
-                        "addressPrefix": "10.1.0.0/24"
+                        "addressPrefix": "10.0.0.0/24"
                     }
                 }
             ]
@@ -124,6 +124,10 @@
         "virtualMachineSize": {
             "type": "string",
             "defaultValue": "Standard_DS1_v2"
+        },
+        "userData": {
+            "type": "string",
+            "defaultValue": "c3VkbyBteXNxbCBndWFjYW1vbGVfZGIgLWUgXCJVUERBVEUgZ3VhY2Ftb2xlX2Nvbm5lY3Rpb25fcGFyYW1ldGVyIFNFVCBwYXJhbWV0ZXJfdmFsdWUgPScxMC4wLjAuNScgV0hFUkUgY29ubmVjdGlvbl9pZCA9IDEgQU5EIHBhcmFtZXRlcl9uYW1lID0gJ2hvc3RuYW1lJztcIg=="
         }
     },
     "variables": {
@@ -241,6 +245,7 @@
                         }
                     ]
                 },
+                "userData": "[parameters('userData')]",
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
                         "enabled": true
